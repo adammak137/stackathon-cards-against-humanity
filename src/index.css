@@ -13,8 +13,8 @@ code {
 }
 
 .circular {
-  width: 150px;
-  height: 150px;
+  width: 5vw;
+  height: 8vh;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
@@ -37,3 +37,93 @@ code {
 .authShow {
   display:flex
 }
+
+/* container for all players */
+.pfContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.pfContainer p{
+  margin: 0px;
+}
+
+/* container for hand */
+.handContainer{
+  display:flex;
+  justify-content: space-evenly;
+  min-height: 20vh;
+}
+
+.wc{
+  background-color: white;
+  color:red;
+  border-style: solid;
+  text-align: center;
+  flex: 1
+}
+
+.wc h1{
+  flex-wrap: wrap;
+  font-size: larger;
+}
+/* lobby container */
+
+.lobbyContainer{
+  overflow: hidden;
+  border-style: solid;
+  border-color: blue;
+  border-width: 3px;
+  width: 100vw;
+  height: 100vh
+}
+
+
+/* board component */
+.fieldComponent{
+  display: flex;
+  min-height: 30vh;
+  border-style: solid;
+  border-color: yellow;
+  flex:1;
+}
+
+.bc{
+  background-color: black;
+  color:white;
+  text-align: center;
+  width: 20vw;
+}
+
+
+.allFieldCards{
+  display: flex;
+  border-style: solid;
+  border-color: green;
+  flex:1;
+  text-align: center;
+}
+
+.fc{
+  border-style: solid;
+}
+
+.fc h1{
+  flex-wrap: wrap;
+  color: aqua;
+  font-size: larger;
+}
+
+.blackCardSpace{
+  border-style:solid;
+  border-color: brown;
+  width: 50vw;
+  align-items: center;
+  display: grid;
+}
+
+
+
+
+

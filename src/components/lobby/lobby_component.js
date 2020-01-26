@@ -1,15 +1,24 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Card from './blackcard'
+import HandComponent from './hand_component'
+import PlayersField from './players_field_component'
+import Board from './board_component'
 
 class LobbyComponent extends Component {
 
 
   render() {
     return (
-      <h1>You are now in a game lobby</h1>
+      <div className='lobbyContainer'>
+        <PlayersField />
+        <Board />
+        <HandComponent />
+      </div>
     )
   }
 }
+
 
 const mapState = state => {
   return {

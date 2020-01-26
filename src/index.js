@@ -6,13 +6,29 @@ import history from './history'
 import store from './store'
 import './index.css';
 import App from './App';
+import firebase from './config/fbConfig'
+import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
+import { createFirestoreInstance } from 'redux-firestore';
+
 import * as serviceWorker from './serviceWorker';
+
+const rrfProps = {
+  firebase,
+  config: {
+    userProfile: "users"
+  },
+  dispatch: store.dispatch,
+  createFirestoreInstance
+};
+
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={history}>
-      <App />
-    </Router>
+    <ReactReduxFirebaseProvider {...rrfProps} >
+      <Router history={history}>
+        <App />
+      </Router>
+    </ReactReduxFirebaseProvider>
   </Provider>
   , document.getElementById('root')
 );
